@@ -1,0 +1,27 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+header {
+    background-color: aquamarine;
+}
+
+h1 {
+    color: black;
+}
+
+#ion {
+    color:chocolate;
+    z-index: 1;
+}
+
+.selfie {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content: flex-start;
+}
