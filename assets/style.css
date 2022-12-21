@@ -8,20 +8,27 @@ body {
 
 header {
     background-color: aquamarine;
+    display: flex;
 }
 
 h1 {
-    color: black;
-}
-
-#ion {
-    color:chocolate;
-    z-index: 1;
+    color: darkmagenta;
+    background-image: url(./small-circles.jpeg);
+    transform:rotate(-90deg);
+    flex: 0 200px;
+    padding: 0;
+    margin: 0;
 }
 
 .selfie {
     display: flex;
-    width: 200px;
-    height: 200px;
+    flex: 3 1 200px;
+    padding: 0;
+    margin: 0;
     justify-content: flex-start;
+}
+
+img {
+    height: 200px;
+    width: 150px;
 }
