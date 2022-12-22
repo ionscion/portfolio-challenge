@@ -11,6 +11,7 @@ header {
     display: flex;
     border: double 10px darkblue;
     border-radius: 15px;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -20,6 +21,17 @@ h1 {
     flex: 0 200px;
     padding: 0;
     margin: 0;
+    text-shadow:1px 1px 1px orange;
+    border: solid black;
+}
+
+h2 {
+    color: darkmagenta;
+    text-shadow: 1px 1px 1px orange;
+}
+
+h3 {
+    color:blueviolet;
 }
 
 .welcome {
@@ -42,4 +54,47 @@ h1 {
 img {
     height: 200px;
     width: 150px;
+    border: solid;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    flex:2 1 200px;
+}
+
+#first-article {
+    flex:3 1 300px;
+}
+
+@media screen and (max-width:768px) {
+    section {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:455px) {
+    header {
+        flex-wrap: wrap;
+        flex-shrink: 2;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        flex: 0 200px;
+        flex-shrink: 3;
+        transform: none;
+    }
+    .selfie {
+        flex: 0 200px;
+        flex-shrink: 2;
+        justify-content: center;
+    }
+    .welcome {
+        flex: 0;
+        flex-shrink: 2;
+    }
 }
