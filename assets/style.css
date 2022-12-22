@@ -14,6 +14,27 @@ header {
     flex-wrap: wrap;
 }
 
+nav {
+    display:flex;
+    justify-content: flex-end;
+    padding: 3px;
+    margin: 3px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+   margin: 0 20px;
+   border: solid;
+   border-radius: 3px;
+   background-color: darkorange;
+}
+
 h1 {
     color: darkmagenta;
     background-image: url(./small-circles.jpeg);
@@ -67,7 +88,15 @@ article {
 
 #first-article {
     flex:3 1 300px;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
+
+#bread {
+    height: 250px;
+    width: 300px;
+}
+
 
 @media screen and (max-width:768px) {
     section {
