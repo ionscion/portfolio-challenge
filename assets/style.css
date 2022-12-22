@@ -20,7 +20,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   padding: 3px;
-  margin: 3px;
+  margin: 15px;
   font-weight: bold;
   color: blue;
   font-style: italic;
@@ -37,6 +37,8 @@ main {
     flex: 2 0 20%;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+    text-align: right;
 }
 
 section {
@@ -53,13 +55,14 @@ ul {
 
 li {
   margin: 0 20px;
+  padding: 5px;
   border: solid;
   border-radius: 3px;
   background-color: darkorange;
 }
 
 footer {
-  position: fixed;
+  position: static;
   bottom: 0px;
 }
 
@@ -81,10 +84,15 @@ h1 {
 h2 {
   color: darkmagenta;
   text-shadow: 1px 1px 1px #F3582F;
+  font-size: 20pt;
 }
 
+/*removed <h3>Bread Recipes</h3> from line 34 for now */
 h3 {
   color: blueviolet;
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 20pt;
 }
 
 .welcome {
@@ -121,16 +129,19 @@ article {
 #first-article {
   flex: 4 1 50%;
   flex-wrap: wrap;
+  display: flex;
 }
 
 #bread {
-  height: 250px;
-  width: 300px;
+  height: 99%;
+  width: 99%;
 }
 
 #bread-img {
   position: relative;
   display: inline-block;
+  flex-grow: 3;
+  flex-basis: 100%;
 }
 
 .img-text {
@@ -138,10 +149,21 @@ article {
   bottom: 5px;
   left: 0;
   background-color: rgba(255, 255, 255, 0.7);
-  color: black;
+  color: darkmagenta;
   padding: 10px;
   margin: 0;
 }
+
+.upper-text {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: darkmagenta;
+    padding: 10px;
+    margin-right: 5px;
+    font-size: larger;
+  }
 
 @media screen and (max-width: 768px) {
   section {
