@@ -28,22 +28,35 @@ nav {
 
 main {
     display: flex;
-    flex: 3 0 100%;
+    flex: 2 0 80%;
     justify-content: flex-end;
 }
 
+aside {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
 .work {
     display: flex;
-    flex: 2 0 20%;
+    flex: 2 0 60%;
+    flex-grow: 0;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: right;
 }
 
+.about-me {
+  flex-grow: 1;
+  flex-direction: row;
+  flex: 1 0 40%;
+}
+
 section {
     display: flex;
-    flex: 3 0 80%;
+    flex: 1 0 50%;
+    flex-direction: row;
 }
 
 ul {
@@ -132,6 +145,10 @@ article {
   display: flex;
 }
 
+#second-article {
+  flex: 1 1 200px;
+}
+
 #bread {
   height: 99%;
   width: 99%;
@@ -144,6 +161,19 @@ article {
   flex-basis: 100%;
 }
 
+#study {
+  position: relative;
+  display: inline-block;
+  flex-grow: 2;
+  flex-basis: 100%;
+}
+
+#prework {
+  height: 99%;
+  width: 99%;
+}
+
+
 .img-text {
   position: absolute;
   bottom: 5px;
@@ -151,7 +181,7 @@ article {
   background-color: rgba(255, 255, 255, 0.7);
   color: darkmagenta;
   padding: 10px;
-  margin: 0;
+  margin: 0; 
 }
 
 .upper-text {
