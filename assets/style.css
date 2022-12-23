@@ -37,6 +37,12 @@ aside {
   flex-direction: column;
   padding: 10px;
 }
+
+.overall-section {
+  display: flex;
+  flex-direction: column;
+}
+
 .work {
     display: flex;
     flex: 2 0 60%;
@@ -50,13 +56,20 @@ aside {
 .about-me {
   flex-grow: 1;
   flex-direction: row;
-  flex: 1 0 40%;
+  padding:10px;
 }
 
-section {
+#mywork {
     display: flex;
-    flex: 1 0 50%;
+    flex: 0 0 80%;
     flex-direction: row;
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 20%;
+  flex-grow: 1;
 }
 
 ul {
