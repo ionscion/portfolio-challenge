@@ -7,8 +7,12 @@
 }
 
 body {
-  background-size: contain;
-  background: linear-gradient(135deg, orange 50%, cyan);
+  background: linear-gradient(135deg, orange 50%, cyan),
+    url(./pexels-gdtography-911738.jpg) repeat;
+  background-size: cover;
+  background-color: rgba(255 255 255 0.5);
+  background-blend-mode: multiply;
+  
 }
 
 a {
@@ -17,7 +21,6 @@ a {
 
 header {
   background-image: url(./background-abs.jpeg);
-  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   border: outset 7px darkmagenta;
@@ -48,25 +51,27 @@ aside {
   align-items: left;
 }
 
-.overall-section {
-  display: flex;
-  flex-direction: column;
-}
-
 .work {
   display: flex;
   flex: 2 0 80%;
   flex-grow: 0;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  text-align: right;
 }
 
 .about-me {
   flex-grow: 1;
-  flex-direction: row;
   padding: 10px;
+}
+
+.contact {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.overall-section {
+  display: flex;
+  flex-direction: column;
 }
 
 #about-section {
@@ -92,7 +97,6 @@ aside {
   flex: 1 0 10%;
   flex-direction: row;
   margin: 10px;
-  flex: wrap;
   align-items: center;
   border: outset 5px darkmagenta;
   background-color: lightsteelblue;
@@ -166,10 +170,6 @@ img {
   border: solid;
 }
 
-section {
-  display: flex;
-}
-
 article {
   flex: 2 1 200px;
 }
@@ -229,13 +229,16 @@ article {
   font-size: larger;
 }
 
-/*@media screen and (max-width: 768px) {
-  .overall-section {
-    flex-direction: column;
-    flex-shrink: unset;
+@media screen and (max-width: 1500px) {
+  body {
+    background: linear-gradient(135deg, orange 50%, cyan),
+      url(./pexels-gdtography-911738.jpg) repeat;
+    background-size: cover;
+    background-color: rgba(255 255 255 0.5);
+    background-blend-mode: multiply;
   }
 }
-*/
+
 @media screen and (max-width: 455px) {
   header {
     flex-wrap: wrap;
