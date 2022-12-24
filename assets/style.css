@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: aquamarine;
+  background-color: darkcyan;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  border: double 10px darkmagenta;
+  border: outset 7px darkmagenta;
   border-radius: 15px;
   flex-wrap: wrap;
 }
@@ -27,15 +27,16 @@ nav {
 }
 
 main {
-    display: flex;
-    flex: 2 0 80%;
-    justify-content: flex-end;
+  display: flex;
+  flex: 2 0 80%;
+  justify-content: flex-end;
 }
 
 aside {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  align-items: left;
 }
 
 .overall-section {
@@ -44,32 +45,49 @@ aside {
 }
 
 .work {
-    display: flex;
-    flex: 2 0 60%;
-    flex-grow: 0;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: right;
+  display: flex;
+  flex: 2 0 80%;
+  flex-grow: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: right;
 }
 
 .about-me {
   flex-grow: 1;
   flex-direction: row;
-  padding:10px;
+  padding: 10px;
+}
+
+#about-section {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 20%;
+  padding: 15px;
+  margin: 15px;
+  border: outset 5px darkmagenta;
+  background-color: lightsteelblue;
 }
 
 #mywork {
-    display: flex;
-    flex: 0 0 80%;
-    flex-direction: row;
+  display: flex;
+  flex: 1 0 70%;
+  flex-direction: row;
+  margin: 15px;
+  flex: wrap;
 }
 
-#about {
+#contact-section {
   display: flex;
+  flex: 1 0 10%;
   flex-direction: row;
-  flex-basis: 20%;
-  flex-grow: 1;
+  margin: 15px;
+  flex: wrap;
+  align-items: center;
+  border: outset 5px darkmagenta;
+  background-color: lightsteelblue;
+  padding: 5px;
 }
 
 ul {
@@ -87,13 +105,8 @@ li {
   background-color: darkorange;
 }
 
-footer {
-  position: static;
-  bottom: 0px;
-}
-
 p {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 h1 {
@@ -103,13 +116,13 @@ h1 {
   flex: 0 200px;
   padding: 0;
   margin: 0;
-  text-shadow: 1px 1px 1px #F3582F;
+  text-shadow: 2px 2px 0px #f3582f;
   border: solid black;
 }
 
 h2 {
   color: darkmagenta;
-  text-shadow: 1px 1px 1px #F3582F;
+  text-shadow: 2px 2px 0px #f3582f;
   font-size: 20pt;
 }
 
@@ -186,7 +199,6 @@ article {
   width: 99%;
 }
 
-
 .img-text {
   position: absolute;
   bottom: 5px;
@@ -194,26 +206,27 @@ article {
   background-color: rgba(255, 255, 255, 0.7);
   color: darkmagenta;
   padding: 10px;
-  margin: 0; 
+  margin: 0;
 }
 
 .upper-text {
-    position: absolute;
-    top: 5px;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-    color: darkmagenta;
-    padding: 10px;
-    margin-right: 5px;
-    font-size: larger;
-  }
-
-@media screen and (max-width: 768px) {
-  section {
-    flex-direction: column;
-  }
+  position: absolute;
+  top: 5px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: darkmagenta;
+  padding: 10px;
+  margin-right: 5px;
+  font-size: larger;
 }
 
+/*@media screen and (max-width: 768px) {
+  .overall-section {
+    flex-direction: column;
+    flex-shrink: unset;
+  }
+}
+*/
 @media screen and (max-width: 455px) {
   header {
     flex-wrap: wrap;
@@ -235,5 +248,18 @@ article {
   .welcome {
     flex: 0;
     flex-shrink: 2;
+  }
+  .overall-section {
+    flex-direction: column;
+    flex-shrink: unset;
+  }
+
+  #mywork {
+    flex-direction: column;
+    flex: 0 1 200px;
+  }
+
+  nav {
+    flex-direction: column;
   }
 }
