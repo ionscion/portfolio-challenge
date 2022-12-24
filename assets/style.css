@@ -8,11 +8,14 @@
 
 body {
   background: linear-gradient(135deg, orange 50%, cyan),
-    url(./pexels-gdtography-911738.jpg) repeat;
+    url(./pexels-gdtography-911738.jpg);
   background-size: cover;
   background-color: rgba(255 255 255 0.5);
   background-blend-mode: multiply;
-  
+  /*display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  */
 }
 
 a {
@@ -26,6 +29,7 @@ header {
   border: outset 7px darkmagenta;
   border-radius: 15px;
   flex-wrap: wrap;
+  flex: 1 0 100%;
 }
 
 nav {
@@ -34,8 +38,8 @@ nav {
   padding: 3px;
   margin: 15px;
   font-weight: bold;
-  color: blue;
   font-style: italic;
+  flex: 1 1 50%;
 }
 
 main {
@@ -48,25 +52,28 @@ aside {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  align-items: left;
+  align-items: center;
+  justify-content: center;
+  flex:0 1 10%;
 }
 
 .work {
   display: flex;
-  flex: 2 0 80%;
+  flex: 2 0 70%;
   flex-grow: 0;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
 }
 
 .about-me {
-  flex-grow: 1;
   padding: 10px;
+  flex:1 0 20%;
 }
 
 .contact {
-  flex-grow: 1;
   padding: 10px;
+  flex: 1 0 10%;
+  bottom: 20px;
 }
 
 .overall-section {
@@ -134,9 +141,12 @@ h1 {
 }
 
 h2 {
+  display: flex;
   color: var(--text);
   text-shadow: 2px 2px 0px #f3582f;
   font-size: 20pt;
+  align-items: center;
+  justify-content: center;
 }
 
 /*removed <h3>Bread Recipes</h3> from line 34 for now */
@@ -175,13 +185,17 @@ article {
 }
 
 #first-article {
-  flex: 4 1 50%;
+  flex: 3 1 40%;
   flex-wrap: wrap;
   display: flex;
 }
 
 #second-article {
-  flex: 1 1 200px;
+  flex: 2 1 30%;
+}
+
+#third-article {
+  flex: 1 1 10%;
 }
 
 #bread {
@@ -238,7 +252,17 @@ article {
     background-blend-mode: multiply;
   }
 }
-
+@media screen and (max-width: 765px) {
+  .overall-section {
+    flex-wrap: wrap;
+    flex-shrink: 2;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main {
+    flex:0 1 100%;
+  }
+}
 @media screen and (max-width: 455px) {
   header {
     flex-wrap: wrap;
@@ -262,8 +286,10 @@ article {
     flex-shrink: 2;
   }
   .overall-section {
-    flex-direction: column;
+    flex-direction: row;
     flex-shrink: unset;
+    flex-wrap: wrap;
+    flex-shrink: 1;
   }
 
   #mywork {
