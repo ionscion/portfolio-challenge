@@ -44,6 +44,21 @@ nav {
   flex: 1 3 50%;
 }
 
+nav a:active {
+  color: darkgoldenrod;
+}
+
+nav a:hover,
+nav a:focus {
+  color: darkgoldenrod;
+}
+
+nav li:hover,
+nav li:focus {
+  color: blueviolet;
+  outline: outset 5px darkmagenta;
+}
+
 main {
   display: flex;
   flex: 2 0 80%;
@@ -54,17 +69,15 @@ aside {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  align-items: center;
+  flex: 0 1;
+  height: auto;
+  width: auto;
   justify-content: center;
-  flex: 0 1 10%;
 }
 
 .work {
-  display: flex;
   flex: 2 0 70%;
-  flex-grow: 0;
-  flex-direction: row;
-  justify-content: flex-start;
+  text-align: center;
 }
 
 .about-me {
@@ -73,9 +86,8 @@ aside {
 }
 
 .contact {
-  padding: 10px;
-  flex: 1 0 10%;
-  bottom: 20px;
+  flex:0 1 10%;
+  align-items: flex-end;
 }
 
 .overall-section {
@@ -98,30 +110,31 @@ aside {
   flex: 1 1 70%;
   flex-direction: column;
   margin: 20px;
-  flex: wrap;
 }
 
 #contact-section {
   display: flex;
   flex: 1 2 10%;
-  flex-direction: row;
-  margin: 10px;
-  align-items: center;
+  flex-direction: row-reverse;
   border: outset 5px darkmagenta;
   background-color: lightsteelblue;
-  padding: 5px;
+  padding: 10px;
+  margin: 10px;
+  justify-content: space-between;
+  text-decoration: underline;
+  align-content: flex-end;
 }
 
 ul {
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 li {
   margin: 0 20px;
-  padding: 5px;
+  padding: 10px;
   border: solid;
   border-radius: 3px;
   background-color: darkcyan;
@@ -139,16 +152,21 @@ h1 {
   padding: 0;
   margin: 0;
   text-shadow: 2px 2px 0px #f3582f;
-  border: solid black;
+  border: outset 5px darkmagenta;
 }
 
 h2 {
-  display: flex;
   color: var(--text);
   text-shadow: 2px 2px 0px #f3582f;
   font-size: 20pt;
-  align-items: center;
-  justify-content: center;
+}
+
+article {
+  display: flex;
+}
+
+div {
+  display: flex;
 }
 
 .welcome {
@@ -175,16 +193,24 @@ img {
 }
 
 #first-article {
-  flex: 3 1 40%;
+  flex: 2 1 40%;
   flex-wrap: wrap;
+  padding: 10px;
+}
+
+.secondary-arts {
+display: flex;
 }
 
 #second-article {
-  flex: 2 1 30%;
+  flex: 1 1 50%;
+  justify-content: space-around;
+  padding: 10px;
 }
 
 #third-article {
-  flex: 1 1 20%;
+  flex: 1 1 50%;
+  padding: 10px;
 }
 
 #bread {
@@ -192,21 +218,21 @@ img {
   width: 99%;
 }
 
-#bread-img {
+#bread-link {
   position: relative;
-  display: inline-block;
-  flex: 3 0 100%;
+  display: flex;
+  flex: 3 1 100%;
 }
 
-#study {
+#study-link {
   position: relative;
-  display: inline-block;
+  display: flex;
   flex: 2 0 100%;
 }
 
 #link-3 {
   position: relative;
-  display: inline-block;
+  display: flex;
   flex: 2 0 100%;
 }
 
@@ -241,7 +267,7 @@ img {
   margin: 0;
 }
 
-@media screen and (max-width: 1500px) {
+/*@media screen and (max-width: 1500px) {
   body {
     background: linear-gradient(135deg, orange 50%, cyan),
       url(./pexels-gdtography-911738.jpg) repeat;
@@ -249,7 +275,7 @@ img {
     background-color: rgba(255 255 255 0.5);
     background-blend-mode: multiply;
   }
-}
+}*/
 @media screen and (max-width: 764px) {
   header {
     flex-wrap: wrap;
