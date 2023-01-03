@@ -5,6 +5,23 @@
 * {
   font-family: "Courier New", Courier, monospace;
 }
+main {
+  display: flex;
+  flex: 2 0 80%;
+  justify-content: flex-end;
+}
+
+article {
+  display: flex;
+}
+
+div {
+  display: flex;
+}
+
+section {
+  display: flex;
+}
 
 body {
   background: linear-gradient(135deg, orange 50%, cyan),
@@ -22,7 +39,7 @@ a {
 }
 
 header {
-  background-image: url(./background-abs.jpeg);
+  background-image: url(./stars.jpg);
   background-size: cover;
   display: flex;
   border: outset 7px darkmagenta;
@@ -56,24 +73,6 @@ nav li:hover,
 nav li:focus {
   color: blueviolet;
   outline: outset 5px darkmagenta;
-}
-
-main {
-  display: flex;
-  flex: 2 0 80%;
-  justify-content: flex-end;
-}
-
-article {
-  display: flex;
-}
-
-div {
-  display: flex;
-}
-
-section {
-  display: flex;
 }
 
 aside {
@@ -115,6 +114,7 @@ aside {
   padding: 10px;
   margin: 15px;
   border: outset 5px darkmagenta;
+  border-radius: 5px;
   background-color: lightsteelblue;
 }
 
@@ -130,6 +130,7 @@ aside {
   flex: 1 2 10%;
   flex-direction: row-reverse;
   border: outset 5px darkmagenta;
+  border-radius: 5px;
   background-color: lightsteelblue;
   padding: 10px;
   margin: 10px;
@@ -158,25 +159,24 @@ p {
   font-weight: bold;
 }
 
-h1 {
+#handle {
   color: darkmagenta;
   background-image: url(./small-circles.jpeg);
   transform: rotate(-90deg);
   flex: 0 200px;
   padding: 0;
   margin: 0;
-  text-shadow: 2px 2px 0px #f3582f;
+  text-shadow: 1px 2px 1px #f3582f;
   border: outset 5px darkmagenta;
 }
 
 h2 {
   color: var(--text);
-  text-shadow: 2px 2px 0px #f3582f;
+  text-shadow: 1px 2px 1px #f3582f;
   font-size: 20pt;
 }
 
 .welcome {
-  display: flex;
   flex: 0 200px;
   padding: 0;
   margin: 0;
@@ -191,7 +191,6 @@ h2 {
 }
 
 .selfie {
-  display: flex;
   flex: 3 1 200px;
   padding: 0;
   margin: 0;
@@ -202,6 +201,7 @@ img {
   height: 200px;
   width: 150px;
   border: outset 5px darkmagenta;
+  border-radius: 5px;
 }
 
 #first-article {
@@ -276,7 +276,7 @@ img {
     flex-direction: column;
   }
 
-  h1 {
+  #handle {
     flex: 0 3 200px;
     transform: none;
   }
@@ -314,24 +314,30 @@ img {
 @media screen and (max-width: 455px) {
   header {
     flex-wrap: wrap;
-    flex-shrink: 6;
-    justify-content: center;
+    flex: 0 2 50% !important;
+    justify-content: space-between;
     flex-direction: column;
   }
 
-  h1 {
-    flex: 0 3 200px;
+  #handle {
+    flex: 0 2 50px;
     transform: none;
+  }
+  .selfie {
+    flex: 0 4 100px;
+  }
+
+  .selfie img {
+    width: 80px;
+    height: 100px;
+    margin-top: 5px;
+  }
+
+  .welcome {
+    flex: 0 3 50px;
   }
   .welcome h2 {
     font-size: 15pt;
-  }
-  .selfie {
-    flex: 0 2 200px;
-    justify-content: center;
-  }
-  .welcome {
-    flex: 0 2;
   }
 
   main {
